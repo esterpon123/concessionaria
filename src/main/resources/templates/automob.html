@@ -23,8 +23,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="/">Home <span class="sr-only"></span></a>
-                    <a class="nav-item nav-link" href="/listaauto">Elenco Auto</a>
-                    <a class="nav-item nav-link active" href="/concessionario">Elenco Concessionari</a>
+                    <a class="nav-item nav-link active" href="/listaauto">Elenco Auto</a>
+                    <a class="nav-item nav-link" href="/concessionario">Elenco Concessionari</a>
                 </div>
             </div>
         </div>
@@ -34,18 +34,16 @@
         <table class="table mt-4">
             <thead class="table-primary">
                 <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Via</th>
-                    <th scope="col">Regione</th>
-                    <th scope="col">Città</th>
+                    <th scope="col">Modello</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Concessionario</th>
                 </tr>
             </thead>
             <tbody class="thead-light">
-                <tr th:each="concessionario : ${listaconcessionari}">
-                    <th th:text="${concessionario.nome}" scope="row">1</th>
-                    <td th:text="${concessionario.via}">Mark</td>
-                    <td th:text="${concessionario.regione}">Mark</td>
-                    <td th:text="${concessionario.citta}">Mark</td>
+                <tr th:each="auto : ${listaautomobili}">
+                    <th th:text="${auto.modello}" scope="row">1</th>
+                    <td th:text="${auto.prezzo}">Mark</td>
+                    <td th:text="${auto.concessionario.nome}">Mark</td>
                 </tr>
             </tbody>
         </table>
