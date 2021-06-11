@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Concessionaria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://download.logo.wine/logo/Fiat_Automobiles/Fiat_Automobiles-Logo.wine.png" width="80" height="auto"
+                    alt="fiat" style="margin-right: 10px;">Fiat</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/index.html">Home <span class="sr-only"></span></a>
+                    <a class="nav-item nav-link" href="/regioni">Regioni</a>
+                    <a class="nav-item nav-link" href="/concessionario">Elenco Concessionari</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-2">Concessionari FIAT</h1>
+        <div class="card mt-4 col-6">
+            <!-- <img class="card-img-top carta" src="https://download.logo.wine/logo/Fiat_Automobiles/Fiat_Automobiles-Logo.wine.png" alt="lofo fiat">   -->
+            <div class="card-body">
+                <h4 class="card-title">Concessionarie in Italia</h4>
+                <span class="card-text">Siamo presenti in </span>
+                <span th:text="${numeroRegioni + ' regioni!'}" class="card-text"></span>
+            </div>
+        </div>
+        <!-- <div class="col-6">
+            <img class="card-img-top" src="https://download.logo.wine/logo/Fiat_Automobiles/Fiat_Automobiles-Logo.wine.png" alt="lofo fiat">  
+        </div> -->
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+
+</html>
