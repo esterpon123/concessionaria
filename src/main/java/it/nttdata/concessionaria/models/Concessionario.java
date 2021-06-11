@@ -1,5 +1,6 @@
 package it.nttdata.concessionaria.models;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -34,10 +35,10 @@ public class Concessionario {
     private String citta;
 
     @OneToMany(mappedBy = "concessionario")
-    private Set<Dipendenti> listaDipendenti;
+    private Set<Dipendenti> listaDipendenti = new HashSet<>();
 
     @OneToMany(mappedBy = "concessionario")
-    private Set<Auto> listaAuto; 
+    private Set<Auto> listaAuto = new HashSet<>(); 
 
     public Set<Auto> getListaAuto() {
         return listaAuto;
@@ -89,6 +90,9 @@ public class Concessionario {
     }
     public void setRegione(Regione regione) {
         this.regione = regione;
+    }
+
+    public void setRegione(String string) {
     }
 
     
