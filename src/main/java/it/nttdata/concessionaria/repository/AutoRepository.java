@@ -6,4 +6,5 @@ import it.nttdata.concessionaria.models.Auto;
 
 public interface AutoRepository extends CrudRepository<Auto, Long> {
     
+
 }
